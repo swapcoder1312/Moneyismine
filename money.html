@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Amazing Amazon affiliate deals and reviews - your gateway to the best products on Amazon." />
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Amazon Affiliate Deals" />
+<meta property="og:description" content="Amazing Amazon affiliate deals and reviews - your gateway to the best products on Amazon." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://yourdomain.com/" />
+<meta property="og:image" content="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SX679_.jpg" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Amazon Affiliate Deals" />
+<meta name="twitter:description" content="Amazing Amazon affiliate deals and reviews - your gateway to the best products on Amazon." />
+<meta name="twitter:image" content="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SX679_.jpg" />
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Amazon Affiliate Deals",
+  "url": "https://yourdomain.com/",
+  "description": "Amazing Amazon affiliate deals and reviews - your gateway to the best products on Amazon.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://yourdomain.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<title>Amazon Affiliate Deals</title>
+<link rel="stylesheet" href="m.css">
+</head>
+<body>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX'); // Replace with your Google Analytics Measurement ID
+</script>
+<header>
+  <h1>Amazon Affiliate Deals</h1>
+  <p>Your gateway to the best Amazon products with exclusive affiliate offers</p>
+</header>
+
+<div class="container">
+  <section class="products" aria-label="Featured Products" id="products-section">
+    <!-- Products will be rendered here by JavaScript -->
+  </section>
+</div>
+
+<script>
+// Product data array
+const products = [
+  {
+    image: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SX679_.jpg",
+    alt: "Echo Dot (4th Gen)",
+    title: "Echo Dot (4th Gen)",
+    desc: "Smart speaker with Alexa – Charcoal. Control your smart home, play music, ask questions, and more.",
+    link: "https://www.amazon.com/dp/B07FZ8S74R?tag=yourAffiliateID-20",
+    aria: "Buy Echo Dot on Amazon"
+  },
+  {
+    image: "https://m.media-amazon.com/images/I/71usuX6-0jL._AC_SX679_.jpg",
+    alt: "Kindle Paperwhite",
+    title: "Kindle Paperwhite",
+    desc: "Waterproof e-reader with a built-in adjustable light. Perfect for reading on the go.",
+    link: "https://www.amazon.com/dp/B07CXG6C9W?tag=yourAffiliateID-20",
+    aria: "Buy Kindle Paperwhite on Amazon"
+  },
+  {
+    image: "https://m.media-amazon.com/images/I/61P7M2M8PUL._AC_SX679_.jpg",
+    alt: "Instant Pot Duo 7-in-1",
+    title: "Instant Pot Duo 7-in-1",
+    desc: "Multi-use programmable pressure cooker, slow cooker, rice cooker, and more.",
+    link: "https://www.amazon.com/dp/B08PQ2KWHS?tag=yourAffiliateID-20",
+    aria: "Buy Instant Pot Duo on Amazon"
+  }
+];
+
+// Render products
+const productsSection = document.getElementById('products-section');
+productsSection.innerHTML = products.map(product => `
+  <article class="product-card">
+  <img class="product-image" src="${product.image}" alt="${product.alt}" loading="lazy" />
+    <div class="product-info">
+      <h2>${product.title}</h2>
+      <p>${product.desc}</p>
+      <a href="${product.link}" target="_blank" rel="nofollow noopener" class="cta-button" aria-label="${product.aria}">Shop Now</a>
+    </div>
+  </article>
+`).join('');
+</script>
+
+<footer>
+  &copy; 2025 Amazon Affiliate Deals - As an Amazon Associate, we earn from qualifying purchases.<br>
+  <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a>
+</footer>
+
+</body>
+</html>
